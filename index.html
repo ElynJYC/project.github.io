@@ -29,6 +29,56 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
+     <!-- ECharts CSS -->
+    <style>
+        .echarts-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            height: 450px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin: 20px;
+            transition: opacity 0.3s ease;
+        }
+        .swiper-slide {
+            height: auto;
+            opacity: 0.5;
+        }
+        .swiper-slide-active {
+            opacity: 1;
+        }
+        .chart-title {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .swiper-pagination-bullet-active {
+            background: #48c9b0 !important;
+
+        }
+        .swiper-container {
+            padding: 30px 0;
+
+        }
+        .intro-text-container {
+            border-radius: 0px;
+            padding: 0px;
+            margin: 0px auto;
+            max-width: 1300px;
+            text-align: margin-left;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+        .intro-text-container p {
+            margin: 0;
+            color: #2c3e50;
+        }
+        .intro-text-container strong {
+            color: #48c9b0;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body class="body-bg">
@@ -253,10 +303,10 @@
                                 food composition analysis <br>
                                 nutritional goal analysis
                             </h3>
-                            <p class="pra">
-                                Our AI analyzes your food intake by breaking down each meal into its nutritional components—calories, carbohydrates, protein, fat and fiber. 
-                                It then compares your daily consumption with your personalized nutritional goals, 
-                                helping you make informed dietary choices and achieve balanced nutrition.
+                            <p class="intro-text-container" style="font-size:15px;">
+                                Our AI analyzes your food intake by breaking down each meal into its <strong>nutritional components</strong>—calories, carbohydrates, protein, fat and fiber. 
+                                It then compares your <strong>daily consumption</strong> with your <strong>personalized nutritional goals</strong>, 
+                                helping you make <strong>informed dietary choices</strong> and achieve <strong>balanced nutrition</strong>.
                             </p>
                         </div>
                         <br>
@@ -312,12 +362,12 @@
                                 real-time posture correction <br>
                                 exercise feedback
                             </h3>
-                            <p class="pra">
-                                This function helps you track your workout posture in real time, 
-                                supporting 10 common exercises across 6 major muscle groups. 
+                            <p class="intro-text-container" style="font-size:15px;">
+                                This function helps you track your <strong>workout posture </strong> in real time, 
+                                supporting <strong>10 common exercises</strong> across <strong>6 major muscle groups</strong>. 
                                 If your movement isn't quite right—like squatting too shallow 
-                                or your feet being too close—the system instantly gives voice 
-                                or text feedback to guide you. It ensures your form is correct, 
+                                or your feet being too close—the system instantly gives <strong>voice
+                                or text feedback</strong>  to guide you. It ensures your form is correct, 
                                 your workouts are safer, and your results more effective.
                             </p>
                         </div>
@@ -364,10 +414,72 @@
                 </span>
                 Summary
             </h2>
-            <h3 class="wow fadeInUp black visible-slowly-right mb-xxl-4 mb-3" data-wow-delay=".5s">
+            <!-- <h3 class="wow fadeInUp black visible-slowly-right mb-xxl-4 mb-3" data-wow-delay=".5s">
                 Comprehensive health insights 
-            </h3>
-            <object data="assets/img/Daily summary.svg" width="100%" height="100%"></object>
+            </h3> -->
+             <div class="intro-text-container">
+                <p>This <strong>AI-driven</strong> health analytics system processes users' daily dietary and exercise inputs, presenting visualized trends in the <strong>Summary module</strong>. Leveraging a <strong>large language model (LLM)</strong> enhanced with <strong>Retrieval-Augmented Generation (RAG)</strong>, it contextualizes user data against health goals, medical history, and regional dietary patterns by retrieving <strong>evidence-based</strong> guidelines. The system generates <strong>personalized summaries</strong> and <strong>adaptive recommendations</strong>, continuously optimizing through feedback loops.</p>
+            </div>
+            <!-- <object data="assets/img/Daily summary.svg" width="100%" height="100%"></object> -->
+             <div class="swiper healthSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1: Health Overview -->
+                    <div class="swiper-slide">
+                        <div class="echarts-container">
+                            <h3 class="chart-title">Weekly Summary</h3>
+                            <div id="healthOverview" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Body Part Distribution -->
+                    <div class="swiper-slide">
+                        <div class="echarts-container">
+                            <h3 class="chart-title">Body Part Training</h3>
+                            <div id="bodyPartDistribution" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3: Muscle Group Distribution -->
+                    <div class="swiper-slide">
+                        <div class="echarts-container">
+                            <h3 class="chart-title">Muscle Group Training</h3>
+                            <div id="muscleGroupDistribution" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4: Meal Type Distribution -->
+                    <div class="swiper-slide">
+                        <div class="echarts-container">
+                            <h3 class="chart-title">Meal Type Distribution</h3>
+                            <div id="mealTypeDistribution" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5: Goal Progress -->
+                    <div class="swiper-slide">
+                        <div class="echarts-container">
+                            <h3 class="chart-title">Weight Loss Progress</h3>
+                            <div id="goalProgress" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 6: Workout Statistics -->
+                    <div class="swiper-slide">
+                        <div class="echarts-container">
+                            <h3 class="chart-title">Workout Statistics</h3>
+                            <div id="workoutStats" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Introductory Text -->
+        <!-- Element -->
+        <div class="container mt-5">
+            
         </div>
     </section>
    
@@ -606,8 +718,416 @@
     <script src="assets/js/spilitext-gsap.js"></script>
     <!--<< Valina Tilt Js >>-->
     <script src="assets/js/vanilla-tilt.min.js"></script>
-    <!--<< Main.js >>-->
+     <!-- ECharts JS -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!--<< Main.js >>-->>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Initialize Swiper with Autoplay
+        var healthSwiper = new Swiper(".healthSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    centeredSlides: false,
+                },
+                768: {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                }
+            },
+            // Ensure all slides are pre-rendered
+            preloadImages: false,
+            lazy: false,
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true
+        });
+
+        // Pause autoplay on hover
+        const swiperContainer = document.querySelector('.healthSwiper');
+        swiperContainer.addEventListener('mouseenter', () => {
+            healthSwiper.autoplay.stop();
+        });
+        swiperContainer.addEventListener('mouseleave', () => {
+            healthSwiper.autoplay.start();
+        });
+
+        // Fresh color palette
+        const colors = {
+            teal: '#48c9b0',
+            coral: '#ff6f61',
+            skyBlue: '#4fc3f7',
+            mint: '#a3e4d7',
+            lavender: '#d7bde2',
+            peach: '#f5b7b1',
+            lemon: '#f7dc6f',
+            softGray: '#d5dbdb'
+        };
+
+        // Initialize all charts after page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Store all chart instances
+            const charts = [
+                {
+                    id: 'healthOverview',
+                    chart: null,
+                    options: {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: '{b}: {c} days ({d}%)'
+                        },
+                        legend: {
+                            top: 'bottom',
+                            data: ['Workout Days', 'Rest Days']
+                        },
+                        series: [
+                            {
+                                name: 'Workout Days',
+                                type: 'pie',
+                                radius: ['40%', '70%'],
+                                avoidLabelOverlap: false,
+                                itemStyle: {
+                                    borderRadius: 10,
+                                    borderColor: '#fff',
+                                    borderWidth: 2
+                                },
+                                label: {
+                                    show: false,
+                                    position: 'center'
+                                },
+                                emphasis: {
+                                    label: {
+                                        show: true,
+                                        fontSize: '18',
+                                        fontWeight: 'bold'
+                                    }
+                                },
+                                labelLine: {
+                                    show: false
+                                },
+                                data: [
+                                    { value: 7, name: 'Workout Days', itemStyle: { color: colors.mint } },
+                                    { value: 0, name: 'Rest Days', itemStyle: { color: colors.softGray } }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    id: 'bodyPartDistribution',
+                    chart: null,
+                    options: {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        xAxis: {
+                            type: 'value',
+                            boundaryGap: [0, 0.01]
+                        },
+                        yAxis: {
+                            type: 'category',
+                            data: ['Glutes', 'Upper Arms', 'Chest', 'Shoulders', 'Back', 'Legs']
+                        },
+                        series: [
+                            {
+                                name: 'Training Sessions',
+                                type: 'bar',
+                                data: [1, 1, 1, 1, 1, 2],
+                                itemStyle: {
+                                    color: function(params) {
+                                        const colorList = [
+                                            colors.lavender,
+                                            colors.skyBlue,
+                                            colors.coral,
+                                            colors.lemon,
+                                            colors.teal,
+                                            colors.mint
+                                        ];
+                                        return colorList[params.dataIndex];
+                                    }
+                                },
+                                label: {
+                                    show: true,
+                                    position: 'right',
+                                    color: '#495057'
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    id: 'muscleGroupDistribution',
+                    chart: null,
+                    options: {
+                        tooltip: {},
+                        radar: {
+                            indicator: [
+                                { name: 'Biceps', max: 2 },
+                                { name: 'Latissimus', max: 2 },
+                                { name: 'Pectorals', max: 2 },
+                                { name: 'Hamstrings', max: 2 },
+                                { name: 'Glutes', max: 2 },
+                                { name: 'Quadriceps', max: 2 },
+                                { name: 'Deltoids', max: 2 }
+                            ],
+                            shape: 'circle',
+                            splitNumber: 3,
+                            axisName: {
+                                color: '#495057'
+                            },
+                            splitArea: {
+                                areaStyle: {
+                                    color: ['rgba(72, 201, 176, 0.1)'],
+                                }
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    color: 'rgba(0, 0, 0, 0.1)'
+                                }
+                            },
+                            splitLine: {
+                                lineStyle: {
+                                    color: 'rgba(0, 0, 0, 0.1)'
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'Training Sessions',
+                            type: 'radar',
+                            data: [
+                                {
+                                    value: [1, 1, 1, 1, 1, 1, 1],
+                                    name: 'This Week',
+                                    areaStyle: {
+                                        color: 'rgba(72, 201, 176, 0.4)'
+                                    },
+                                    lineStyle: {
+                                        width: 2,
+                                        color: colors.teal
+                                    },
+                                    itemStyle: {
+                                        color: colors.teal
+                                    }
+                                }
+                            ]
+                        }]
+                    }
+                },
+                {
+                    id: 'mealTypeDistribution',
+                    chart: null,
+                    options: {
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: '{b}: {c} meals ({d}%)'
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'left',
+                        },
+                        series: [
+                            {
+                                name: 'Meal Types',
+                                type: 'pie',
+                                radius: ['40%', '70%'],
+                                center: ['50%', '60%'],
+                                data: [
+                                    { value: 7, name: 'Lunch', itemStyle: { color: colors.skyBlue } },
+                                    { value: 4, name: 'Other', itemStyle: { color: colors.softGray } },
+                                    { value: 7, name: 'Dinner', itemStyle: { color: colors.lavender } },
+                                    { value: 7, name: 'Breakfast', itemStyle: { color: colors.coral } }
+                                ],
+                                emphasis: {
+                                    itemStyle: {
+                                        shadowBlur: 10,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.3)'
+                                    }
+                                },
+                                label: {
+                                    show: true,
+                                    formatter: '{b}: {c} ({d}%)',
+                                    color: '#495057'
+                                },
+                                labelLine: {
+                                    show: true
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    id: 'goalProgress',
+                    chart: null,
+                    options: {
+                        tooltip: {
+                            formatter: '{a} <br/>{b} : {c}%'
+                        },
+                        series: [
+                            {
+                                name: 'Calorie Target',
+                                type: 'gauge',
+                                detail: {
+                                    formatter: '{value}%',
+                                    fontSize: 24,
+                                    fontWeight: 'bold',
+                                    color: colors.teal,
+                                    offsetCenter: [0, '70%']
+                                },
+                                data: [
+                                    {
+                                        value: 100,
+                                        name: 'Calorie Target'
+                                    }
+                                ],
+                                axisLine: {
+                                    lineStyle: {
+                                        width: 25,
+                                        color: [
+                                            [0.3, colors.mint],
+                                            [0.7, colors.skyBlue],
+                                            [1, colors.teal]
+                                        ]
+                                    }
+                                },
+                                axisTick: {
+                                    distance: -25,
+                                    length: 10,
+                                    lineStyle: {
+                                        color: '#fff',
+                                        width: 2
+                                    }
+                                },
+                                splitLine: {
+                                    distance: -25,
+                                    length: 20,
+                                    lineStyle: {
+                                        color: '#fff',
+                                        width: 3
+                                    }
+                                },
+                                pointer: {
+                                    show: true,
+                                    length: '60%',
+                                    width: 8,
+                                    itemStyle: {
+                                        color: colors.coral
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    id: 'workoutStats',
+                    chart: null,
+                    options: {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        xAxis: {
+                            type: 'category',
+                            data: ['Workout Days', 'Workout Sessions', 'Total Sets']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                            {
+                                name: 'Count',
+                                type: 'bar',
+                                data: [
+                                    { value: 7, itemStyle: { color: colors.teal } },
+                                    { value: 7, itemStyle: { color: colors.skyBlue } },
+                                    { value: 21, itemStyle: { color: colors.mint } }
+                                ],
+                                label: {
+                                    show: true,
+                                    position: 'top',
+                                    color: '#495057'
+                                }
+                            }
+                        ]
+                    }
+                }
+            ];
+
+            // Initialize all charts and store instances
+            charts.forEach(chart => {
+                const element = document.getElementById(chart.id);
+                if (element) {
+                    chart.chart = echarts.init(element);
+                    chart.chart.setOption(chart.options);
+                }
+            });
+
+            // Force resize on slide change and initial load
+            const resizeAllCharts = () => {
+                charts.forEach(chart => {
+                    if (chart.chart) {
+                        chart.chart.resize();
+                    }
+                });
+            };
+
+            // Initial resize after a short delay to ensure DOM is ready
+            setTimeout(resizeAllCharts, 100);
+
+            // Resize charts when swiper slide changes or visibility changes
+            healthSwiper.on('slideChange', resizeAllCharts);
+            healthSwiper.on('slideChangeTransitionEnd', resizeAllCharts);
+
+            // Observe visibility changes for each slide
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const chartId = entry.target.querySelector('.echarts-container > div').id;
+                        const chartObj = charts.find(c => c.id === chartId);
+                        if (chartObj && chartObj.chart) {
+                            chartObj.chart.resize();
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1
+            });
+
+            // Observe all swiper slides
+            document.querySelectorAll('.swiper-slide').forEach(slide => {
+                observer.observe(slide);
+            });
+        });
+    </script>
 </body>
 
 </html>
