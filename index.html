@@ -31,6 +31,19 @@
     <link rel="stylesheet" href="assets/css/main.css">
      <!-- ECharts CSS -->
     <style>
+        .avatar-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        margin-right: 20px;
+    }
+
+    .testimonial-items1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
         .echarts-container {
             background-color: white;
             border-radius: 10px;
@@ -270,7 +283,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-thumb2 reveal-right rounded-4">
-                        <video src="assets/img/1chat.mp4" width="600" height="600"  controls class="w-100 rounded-4">
+                        <video src="assets/img/F1_General_Chatbot.mp4" width="600" height="600"  controls class="w-100 rounded-4">
                     </div>
                 </div>
             </div>    
@@ -284,7 +297,7 @@
             <div class="row g-4 align-items-center justify-content-between flex-row-reverse">
                 <div class="col-lg-6">
                     <div class="about-thumb2 reveal-right rounded-4">
-                        <video src="assets/img/2food.mp4" width="600" height="600"  controls class="w-100 rounded-4">
+                        <video src="assets/img/F2_Food_analysis.mp4" width="600" height="600"  controls class="w-100 rounded-4">
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-6">
@@ -392,7 +405,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-thumb2 reveal-right rounded-4">
-                        <video src="assets/img/fitness.mp4" width="600" height="600"  controls class="w-100 rounded-4">
+                        <video src="assets/img/F3_Fintness.mp4" width="600" height="600"  controls class="w-100 rounded-4">
                     </div>
                 </div>
             </div>    
@@ -401,141 +414,52 @@
     </section>
 
 
-    <!-- summary Section Start -->
-     <section class="summary-section2 space-bottom cmn-bg fix">
+     <!-- summary Section Start -->
+    <section class="summary-section2 space-bottom cmn-bg fix">
         <div class="container">
-            <span class="cmn-tag p1-bg heading-font mb-xl-1 mb-2">Function 4</span>
             <div class="row g-4 align-items-center justify-content-between flex-row-reverse">
-            <h2 class="black wow fadeInUp mb-40" data-wow-delay="0.6s">
-                <span class="position-relative z-1 w-100">
-                    Daily
-                    <img src="assets/img/title-badge1.png" alt="img"
-                        class="title-badge1 d-md-block d-none w-100">
-                </span>
-                Summary
-            </h2>
-            <!-- <h3 class="wow fadeInUp black visible-slowly-right mb-xxl-4 mb-3" data-wow-delay=".5s">
-                Comprehensive health insights 
-            </h3> -->
-             <div class="intro-text-container">
-                <p>This <strong>AI-driven</strong> health analytics system processes users' daily dietary and exercise inputs, presenting visualized trends in the <strong>Summary module</strong>. Leveraging a <strong>large language model (LLM)</strong> enhanced with <strong>Retrieval-Augmented Generation (RAG)</strong>, it contextualizes user data against health goals, medical history, and regional dietary patterns by retrieving <strong>evidence-based</strong> guidelines. The system generates <strong>personalized summaries</strong> and <strong>adaptive recommendations</strong>, continuously optimizing through feedback loops.</p>
-            </div>
-            <!-- <object data="assets/img/Daily summary.svg" width="100%" height="100%"></object> -->
-             <div class="swiper healthSwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1: Health Overview -->
-                    <div class="swiper-slide">
-                        <div class="echarts-container">
-                            <h3 class="chart-title">Weekly Summary</h3>
-                            <div id="healthOverview" style="width: 100%; height: 350px;"></div>
-                        </div>
+                <div class="col-lg-6">
+                    <div class="about-thumb2 reveal-right rounded-4">
+                        <video src="assets/img/F4_Summary.mp4" width="600" height="600"  controls class="w-100 rounded-4">
                     </div>
-                    
-                    <!-- Slide 2: Body Part Distribution -->
-                    <div class="swiper-slide">
-                        <div class="echarts-container">
-                            <h3 class="chart-title">Body Part Training</h3>
-                            <div id="bodyPartDistribution" style="width: 100%; height: 350px;"></div>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="about-content2">
+                        <div class="section-title mb-4">
+                            <span class="cmn-tag p1-bg heading-font">Founction 4</span>
+                            <h2 class="wow fadeInUp black visible-slowly-right mb-xxl-4 mb-3" data-wow-delay=".3s">
+                                <span class="position-relative z-1">
+                                    Daily/Weekly
+                                    <img src="assets/img/title-badge1.png" alt="img"
+                                        class="title-badge1 d-md-block d-none w-100">
+                                </span>
+                                Summary
+                            </h2>
+                            <h3 class="wow fadeInUp black visible-slowly-right mb-xxl-4 mb-3" data-wow-delay=".5s">
+                                Personalized, Comprehensive, Authoritative,
+                                Evidence supported 
+                            </h3>
+                            <div class="intro-text-container">
+                            <p>This <strong>AI-driven</strong> health analytics system processes users' daily dietary and exercise data, displaying trends in the <strong>Summary module</strong>. It contextualizes information against health goals and provides <strong>personalized summaries</strong> and <strong>adaptive recommendations</strong>, continuously optimizing through feedback.</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- Slide 3: Muscle Group Distribution -->
-                    <div class="swiper-slide">
-                        <div class="echarts-container">
-                            <h3 class="chart-title">Muscle Group Training</h3>
-                            <div id="muscleGroupDistribution" style="width: 100%; height: 350px;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4: Meal Type Distribution -->
-                    <div class="swiper-slide">
-                        <div class="echarts-container">
-                            <h3 class="chart-title">Meal Type Distribution</h3>
-                            <div id="mealTypeDistribution" style="width: 100%; height: 350px;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 5: Goal Progress -->
-                    <div class="swiper-slide">
-                        <div class="echarts-container">
-                            <h3 class="chart-title">Weight Loss Progress</h3>
-                            <div id="goalProgress" style="width: 100%; height: 350px;"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 6: Workout Statistics -->
-                    <div class="swiper-slide">
-                        <div class="echarts-container">
-                            <h3 class="chart-title">Workout Statistics</h3>
-                            <div id="workoutStats" style="width: 100%; height: 350px;"></div>
+                        <br>
+                        <div class="about-point mb-40">
+                            <div class="about-point-item d-flex align-items-center gap-sm-3 gap-2">
+                                <img src="assets/img/summary1.png" width="130" height="130" alt="icon">  
+                            </div>
+                            <div class="about-point-item d-flex align-items-center gap-sm-3 gap-2">
+                                <img src="assets/img/summary2.png" width="130" height="130" alt="icon">     
+                            </div>
+                            <div class="about-point-item d-flex align-items-center gap-sm-3 gap-2">
+                                <img src="assets/img/summary3.png" width="130" height="130" alt="icon">
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <br>
-                 <br>
-                <div class="swiper-pagination"></div>
-            </div>
+            </div>    
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="sponsor-text-slide white-bg swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    Smart Health
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    <img src="assets/img/star-text.png" alt="icon">
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    Your Wellness Priority
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    <img src="assets/img/star-text.png" alt="icon">
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    Caring for You Always
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    <img src="assets/img/star-text.png" alt="icon">
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    AI-powered
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    <img src="assets/img/star-text.png" alt="icon">
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    Health Management App
-                </div>
-            </div>
-            <div class="swiper-slide w-fit">
-                <div class="text-slide-item">
-                    <img src="assets/img/star-text.png" alt="icon">
-                </div>
-            </div>
-        </div>
-    </div>
     </section>
     
     <!-- Choose Section Start -->
@@ -564,26 +488,45 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="chosse-middle">
-                        <a class="w-100 rounded-4 overflow-hidden mb-xxl-4 mb-3 d-block">
-                            <img src="assets/img/bot.png" alt="img" class="rounded-4 w-100">
-                        </a>
+                        <!-- <a class="w-100 rounded-4 overflow-hidden mb-xxl-4 mb-3 d-block">
+                            <img src="assets/img/bot.png" width="100" height="100"alt="img" class="rounded-4 w-100">
+                        </a> -->
                         <h4 class="mb-xxl-3 mb-2">
                             <a class="black fw_700">
-                                More real-time.
+                                Support multi-modal inputs and analysis
                             </a>
                         </h4>
                         <p class="pra fs-seven">
-                            Local posture analysis sets new standards for real-time mobile health coaching
+                        Can analyze food images and real-time motion footage. 
                         </p>
                         <br>
                         <h4 class="mb-xxl-3 mb-2">
                             <a class="black fw_700">
-                                More authoritative and evidence-powered. 
+                                More authoritative and evidence-powered
                             </a>
                         </h4>
                         <p class="pra fs-seven">
-                            The introduction of RAG integration of peer-reviewed sources (e.g.,Nutrition and Health 5th Edition) ensures evidence-based recommendations, reducing misinformation risks. 
+                            Incorporating knowledge from <i>Chinese Dietary Guidelines for Residents (2022)</i> and <i>American Dietary Guidelines for Residents(2020-2025)</i> ensures evidence-based recommendations, reducing misinformation risks.
                         </p>
+                        <br>
+                        <h4 class="mb-xxl-3 mb-2">
+                            <a class="black fw_700">
+                                More real-time
+                            </a>
+                        </h4>
+                        <p class="pra fs-seven">
+                            Local posture analysis sets new standards for real-time mobile health coaching.
+                        </p>
+                        <br>
+                        <h4 class="mb-xxl-3 mb-2">
+                            <a class="black fw_700">
+                                Care for special groups
+                            </a>
+                        </h4>
+                        <p class="pra fs-seven">
+                        supported by <i>The New Optimum Nutrition Bible</i>, Friendly to the people with medical history or special medical conditions.
+                        </p>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
@@ -598,90 +541,115 @@
 
     
   <!-- Developers Section Start -->
-  <section class="develop section body-bg space-bottom">
-    <div class="container develop-contaienr">
-        <div class="develop-wrap position-relative">
-            <img src="assets/img/special-element.png" alt="element" class="special-element">
+    <section class="develop section body-bg space-bottom">
+        <div class="container develop-contaienr">
+            <div class="develop-wrap position-relative">
+                <img src="assets/img/special-element.png" alt="element" class="special-element">
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="testimonail-wrapper-style1">
-            <div class="swiper testimonial-slider1">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-items1">
-                            <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
-                            <h2 class="black fw_700 mb-xl-4 mb-3">What Our Developers <br> Are Saying</h2>
-                            <p class="fs-five black mb-xxl-4 mb-3">
-                                Health is wealth. A healthy body empowers people to enjoy life with greater vitality. 
-                                Health isn’t built overnight, we must begin by cultivating healthy lifestyle habits.
-                            </p>
-                            <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
-                                <div class="line"></div> Jin Yicen 
+        <div class="container">
+            <div class="testimonail-wrapper-style1">
+                <div class="swiper testimonial-slider1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-items1">
+                                <img src="assets/img/jinyicen1.jpg" alt="Jin YiCen" class="avatar-circle"
+                                    onmouseover="this.src='assets/img/jinyicen2.jpg'"
+                                    onmouseout="this.src='assets/img/jinyicen1.jpg'">
+                                <div style="width: 80%">
+                                    <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
+                                    <h2 class="black fw_700 mb-xl-4 mb-3">What Developers Are Saying</h2>
+                                    <p class="fs-five black mb-xxl-4 mb-3">
+                                        Health is wealth. A healthy body empowers people to enjoy life with greater
+                                        vitality.
+                                        Health isn’t built overnight, we must begin by cultivating healthy lifestyle
+                                        habits.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
+                                        <div class="line"></div> Jin Yicen
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-items1">
-                            <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
-                            <h2 class="black fw_700 mb-xl-4 mb-3">What Our Designers <br> Are Saying</h2>
-                            <p class="fs-five black mb-xxl-4 mb-3">
-                                Every bite matters.
-                            </p>
-                            <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
-                                <div class="line"></div> Li Baipeng
+                        <div class="swiper-slide">
+                            <div class="testimonial-items1">
+                                <img src="assets/img/libaipeng1.jpg" alt="Li BaiPeng" class="avatar-circle"
+                                    onmouseover="this.src='assets/img/libaipeng2.jpg'"
+                                    onmouseout="this.src='assets/img/libaipeng1.jpg'">
+                                <div style="width: 80%">
+                                    <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
+                                    <h2 class="black fw_700 mb-xl-4 mb-3">What Developers Are Saying</h2>
+                                    <p class="fs-five black mb-xxl-4 mb-3">
+                                        Every bite matters.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
+                                        <div class="line"></div> Li Baipeng
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-items1">
-                            <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
-                            <h2 class="black fw_700 mb-xl-4 mb-3">What Our Designers <br> Are Saying</h2>
-                            <p class="fs-five black mb-xxl-4 mb-3">
-                                A healthy lifestyle is the foundation of a happy life.
-                            </p>
-                            <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
-                                <div class="line"></div> Han Chenxu
+                        <div class="swiper-slide">
+                            <div class="testimonial-items1">
+                                <img src="assets/img/hanchenxu1.jpg" alt="Han ChenXu" class="avatar-circle"
+                                    onmouseover="this.src='assets/img/hanchenxu2.jpg'"
+                                    onmouseout="this.src='assets/img/hanchenxu1.jpg'">
+                                <div style="width: 80%">
+                                    <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
+                                    <h2 class="black fw_700 mb-xl-4 mb-3">What Developers Are Saying</h2>
+                                    <p class="fs-five black mb-xxl-4 mb-3">
+                                        A healthy lifestyle is the foundation of a happy life.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
+                                        <div class="line"></div> Han Chenxu
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-items1">
-                            <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
-                            <h2 class="black fw_700 mb-xl-4 mb-3">What Our Designers <br> Are Saying</h2>
-                            <p class="fs-five black mb-xxl-4 mb-3">
-                                The groundwork of all happiness is health.
-                            </p>
-                            <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
-                                <div class="line"></div> Liu Boyan
+                        <div class="swiper-slide">
+                            <div class="testimonial-items1">
+                                <img src="assets/img/liuboyan1.jpg" alt="Liu BoYan" class="avatar-circle"
+                                    onmouseover="this.src='assets/img/liuboyan2.jpg'"
+                                    onmouseout="this.src='assets/img/liuboyan1.jpg'">
+                                <div style="width: 80%">
+                                    <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
+                                    <h2 class="black fw_700 mb-xl-4 mb-3">What Developers Are Saying</h2>
+                                    <p class="fs-five black mb-xxl-4 mb-3">
+                                        The groundwork of all happiness is health.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
+                                        <div class="line"></div> Liu Boyan
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-items1">
-                            <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
-                            <h2 class="black fw_700 mb-xl-4 mb-3">What Our Designers <br> Are Saying</h2>
-                            <p class="fs-five black mb-xxl-4 mb-3">
-                                Health is not just about what you eat, but also about how you move and live.
-                            </p>
-                            <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
-                                <div class="line"></div> Luo Jiyang
+                        <div class="swiper-slide">
+                            <div class="testimonial-items1">
+                                <img src="assets/img/luojiyang1.jpg" alt="Luo Jiyang" class="avatar-circle"
+                                    onmouseover="this.src='assets/img/luojiyang2.jpg'"
+                                    onmouseout="this.src='assets/img/luojiyang1.jpg'">
+                                <div style="width: 80%">
+                                    <span class="fs-eight fw_500 black d-block mb-2">Team Philosophy</span>
+                                    <h2 class="black fw_700 mb-xl-4 mb-3">What Developers Are Saying</h2>
+                                    <p class="fs-five black mb-xxl-4 mb-3">
+                                        Health is not just about what you eat, but also about how you move and live.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 fs-six fw_600 black">
+                                        <div class="line"></div> Luo Jiyang
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="array-button array-button-black wow fadeInUp" data-wow-delay=".5s">
+                    <button class="array-prev d-center"><img src="assets/img/arrow-left-black.png" alt="icon"></button>
+                    <button class="array-next d-center"><img src="assets/img/arrow-right-black.png" alt="icon"></button>
+                </div>
+                <!-- Element -->
+                <img src="assets/img/testimap-element.png" alt="element" class="testimonial-element1">
             </div>
-            <div class="array-button array-button-black wow fadeInUp" data-wow-delay=".5s">
-                <button class="array-prev d-center"><img src="assets/img/arrow-left-black.png"
-                        alt="icon"></button>
-                <button class="array-next d-center"><img src="assets/img/arrow-right-black.png"
-                        alt="icon"></button>
-            </div>
-            <!-- Element -->
-            <img src="assets/img/testimap-element.png" alt="element" class="testimonial-element1">
         </div>
-    </div>
-</section>   
+    </section>   
 
 
     <!--<< All JS Plugins >>-->
